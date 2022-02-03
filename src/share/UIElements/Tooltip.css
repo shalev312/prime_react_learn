@@ -1,0 +1,6 @@
+.p-tooltip.custom-tooltip .p-tooltip-arrow {
+  border-right-color: var(--main-orange);
+}
+.p-tooltip.custom-tooltip .p-tooltip-text {
+  background: var(--main-orange);
+}

@@ -1,0 +1,32 @@
+.p-datatable .p-datatable-thead > tr > th {
+  color: white;
+  background: var(--app-item);
+  border-color: var(--main-item-border);
+}
+.p-datatable .p-datatable-tbody > tr,
+.p-datatable .p-datatable-tbody > tr > td {
+  color: var(--main-hovered-text);
+  background: var(--app-item);
+  border-color: var(--main-item-border);
+}
+
+.p-datatable .p-sortable-column.p-highlight,
+.p-datatable .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover,
+.p-datatable
+  .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover {
+  background: var(--main-item);
+}
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+  color: var(--main-orange) !important;
+}
+
+.p-datatable .p-sortable-column:focus {
+  box-shadow: none;
+}
+
+.p-datatable .p-datatable-header {
+  background: var(--app-item);
+  color: var(--opacity-orange);
+  font-size: 1.6rem;
+  border: none;
+}
