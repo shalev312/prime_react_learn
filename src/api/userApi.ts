@@ -14,6 +14,15 @@ export interface UserData {
     bs: string;
   };
 }
+
+export interface User {
+  id: number;
+  username: string;
+  email: string;
+  website: string;
+  position: string;
+  company: string;
+}
 // Can to config a lot of utils to improve that constant code!
 export const usersApi = createApi({
   reducerPath: 'users',
@@ -22,8 +31,20 @@ export const usersApi = createApi({
   }),
   tagTypes: ['Users'],
   endpoints: (builder) => ({
-    getAllUsers: builder.query<UserData[], void>({
+    getAllUsers: builder.query<User[], void>({
       query: () => URLS.user.getAll,
+      transformResponse: (users: UserData[]) => {
+        console.log(users);
+
+        return users?.map((user) => ({
+          id: user.id,
+          username: user.username,
+          email: user.email,
+          website: user.website,
+          position: user.company.bs,
+          company: user.company.name,
+        }));
+      },
       providesTags: [{ type: 'Users', id: 'LIST' }],
     }),
   }),

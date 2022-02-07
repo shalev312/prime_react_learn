@@ -15,7 +15,9 @@ const Tooltip = ({ children, id, content }: Props) => {
         className={`custom-tooltip${id} custom-tooltip`}
         target={`.custom-tooltip-${id}`}
         content={content}
-      />
+      >
+        {children}
+      </PrimeTooltip>
       <span className={`custom-tooltip-${id}`}>{children}</span>
     </>
   );

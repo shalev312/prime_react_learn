@@ -1,5 +1,5 @@
 import { Column } from './Table';
-import { User } from '../page/DetailTable';
+import { User } from '../../api/userApi';
 export const columns: Column<User>[] = [
   {
     field: 'username',

@@ -2,7 +2,7 @@ import React from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column as ColumnPrime } from 'primereact/column';
 import ConditionalWrapper from '../../share/utils/ConditionalWrapper';
-import Tooltip from '../../share/UIElements/Tooltip';
+import Tooltip from '../../share/UIElements/Tooltip/Tooltip';
 import './Table.css';
 
 export interface Column<T> {

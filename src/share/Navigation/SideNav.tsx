@@ -1,6 +1,6 @@
 import React from 'react';
-import Tooltip from '../UIElements/Tooltip';
-import '../UIElements/Tooltip.css';
+import Tooltip from '../UIElements/Tooltip/Tooltip';
+import '../UIElements/Tooltip/Tooltip.css';
 
 const SideNav = () => {
   return (
