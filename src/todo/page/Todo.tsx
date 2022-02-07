@@ -12,7 +12,9 @@ const TodoItem = ({ id, title, completed, onClick }: Props) => {
 
   return (
     <li
-      className={`text-xl cursor-pointer ${completed && 'line-through'}`}
+      className={`border-1 border-solid border-orange-300 mt-3 p-2 text-xl cursor-pointer ${
+        completed && 'line-through'
+      }`}
       onClick={onTodoHandler}
     >
       {title}

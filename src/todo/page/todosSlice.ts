@@ -20,7 +20,10 @@ export const todosSlice = createSlice({
         todo.completed = !todo.completed;
       }
     },
+    addTodo: (state, action: PayloadAction<Todo>) => {
+      state.todos.push(action.payload);
+    },
   },
 });
 
-export const { changeTodo } = todosSlice.actions;
+export const { addTodo, changeTodo } = todosSlice.actions;
