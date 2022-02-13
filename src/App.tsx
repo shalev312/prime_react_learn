@@ -1,9 +1,9 @@
-import { Provider } from 'react-redux';
-import DetailTable from './users/page/DetailTable';
-import { store } from './app/store';
-import Layout from './Layout';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Todos from './todo/page/Todos';
+import { Provider } from "react-redux";
+import DetailTable from "./users/page/DetailTable";
+import { store } from "./app/store";
+import Layout from "./Layout";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Todos from "./todo/page/Todos";
 
 const App = () => {
   return (
