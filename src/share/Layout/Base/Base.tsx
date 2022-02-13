@@ -1,17 +1,24 @@
 import classNames from "classnames";
 import React, { useMemo } from "react";
-import { Space, PositionValue, Layout } from "../utils/spacingTypes";
-import { buildSpacing } from "../utils/space";
+import {
+  Space,
+  PositionValue,
+  Layout,
+  Flex,
+} from "../../UIElements/utils/spacingTypes";
+import { buildSpacing } from "../../UIElements/utils/space";
 
-interface Props extends Space, PositionValue, Layout {
+interface Props extends Space, PositionValue, Layout, Flex {
+  /**
+   * The regular CSS backgroud attribute for custom the background the div parent root element.
+   */
+  background?: string;
   /**
    * HTML width attribute for custom width the div parent root element.
-   * The default is 100%
    */
   width?: number | string;
   /**
    * HTML width attribute for custom height the div parent root element.
-   * The default is 100%
    */
   height?: number | string;
   /**
@@ -22,6 +29,9 @@ interface Props extends Space, PositionValue, Layout {
    * In line style attribute for custom styling the div parent root element.
    */
   style?: React.CSSProperties | undefined;
+  /**
+   * The regular React children prop.
+   */
   children?: React.ReactNode;
   /**
    * The regular HTML element onClick function.
@@ -36,24 +46,40 @@ interface Props extends Space, PositionValue, Layout {
  * 3. position
  * 4. z-index
  */
-const Box = ({
+const Base = ({
   className,
-  width = "100%",
-  height = "100%",
+  background,
+  width,
+  height,
   style,
   display,
   position,
   zIndex,
   onClick,
   children,
+  flexDirection,
+  flexWrap,
+  alignItems,
+  justifyContent,
+  gap,
   ...rest
 }: Props) => {
-  const spacing = useMemo<string>(() => buildSpacing(rest), [rest]);
+  const spacing = useMemo<string>(
+    () =>
+      buildSpacing({
+        "align-items": alignItems,
+        "justify-content": justifyContent,
+        ...rest,
+      }),
+    [rest, justifyContent, alignItems]
+  );
   return (
     <div
-      style={{ width, height, ...style }}
+      style={{ width, height, gap, background, ...style }}
       onClick={onClick}
       className={classNames(className, display, position, spacing, {
+        [`flex-${flexWrap}`]: flexWrap,
+        [`flex-${flexDirection}`]: flexDirection,
         [`z-${zIndex}`]: zIndex === 0 || zIndex,
       })}
     >
@@ -62,4 +88,4 @@ const Box = ({
   );
 };
 
-export default Box;
+export default Base;
