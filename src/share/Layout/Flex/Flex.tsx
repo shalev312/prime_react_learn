@@ -1,10 +1,11 @@
 import React from "react";
 import {
   Flex as FlexType,
+  FlexDisplay,
   Layout,
   PositionValue,
   Space,
-} from "../../UIElements/utils/spacingTypes";
+} from "../utils/spacingTypes";
 import Base from "../Base/Base";
 
 interface Props extends Space, PositionValue, Layout, FlexType {
@@ -15,7 +16,7 @@ interface Props extends Space, PositionValue, Layout, FlexType {
   /**
    * The regular CSS layout display, the default set to flex.
    */
-  display?: "flex" | "inline-flex";
+  display?: FlexDisplay;
   /**
    * HTML class attribute for custom styling the div parent root element.
    */

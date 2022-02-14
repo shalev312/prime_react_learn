@@ -27,6 +27,11 @@ export type Display =
   | "flex"
   | "inline-flex";
 /**
+ * The regular CSS display attribute limited to flex flow display.
+ * Choose one of the following inputs: 'hidden' | 'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex'.
+ */
+export type FlexDisplay = "flex" | "inline-flex";
+/**
  * The regular CSS overflow attribute.
  * Choose one of the following inputs: 'auto' | 'hidden' | 'visible' | 'scroll' | 'x-auto' | 'x-hidden' | 'x-visible' | 'x-scroll' | 'y-auto'.
  */
@@ -46,9 +51,25 @@ export type Overflow =
  */
 export type Position = "static" | "fixed" | "relative" | "absolute" | "sticky";
 export interface PositionValue {
+  /**
+   * The regular CSS top attribute.
+   * Choose one of the following inputs: 0 | 50 | 100 | "auto"
+   */
   top?: PositionValueOptions | "auto";
+  /**
+   * The regular CSS right attribute.
+   * Choose one of the following inputs: 0 | 50 | 100 | "auto"
+   */
   right?: PositionValueOptions | "auto";
+  /**
+   * The regular CSS left attribute.
+   * Choose one of the following inputs: 0 | 50 | 100 | "auto"
+   */
   left?: PositionValueOptions | "auto";
+  /**
+   * The regular CSS bottom attribute.
+   * Choose one of the following inputs: 0 | 50 | 100 | "auto"
+   */
   bottom?: PositionValueOptions | "auto";
 }
 /**
@@ -57,8 +78,8 @@ export interface PositionValue {
  */
 export type ZIndex = Range<6> | "auto";
 
-type SpaceOptions = Range<9> | "auto";
-type PositionValueOptions = 0 | 50 | 100 | "auto";
+export type SpaceOptions = Range<9> | "auto";
+export type PositionValueOptions = 0 | 50 | 100 | "auto";
 
 export interface Layout {
   /**

@@ -1,12 +1,7 @@
 import classNames from "classnames";
 import React, { useMemo } from "react";
-import {
-  Space,
-  PositionValue,
-  Layout,
-  Flex,
-} from "../../UIElements/utils/spacingTypes";
-import { buildSpacing } from "../../UIElements/utils/space";
+import { Space, PositionValue, Layout, Flex } from "../utils/spacingTypes";
+import { buildSpacing } from "../utils/space";
 
 interface Props extends Space, PositionValue, Layout, Flex {
   /**
@@ -75,6 +70,7 @@ const Base = ({
   );
   return (
     <div
+      data-testid="base-layout"
       style={{ width, height, gap, background, ...style }}
       onClick={onClick}
       className={classNames(className, display, position, spacing, {

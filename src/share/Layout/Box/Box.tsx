@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Space,
-  PositionValue,
-  Layout,
-} from "../../UIElements/utils/spacingTypes";
+import { Space, PositionValue, Layout } from "../utils/spacingTypes";
 import Base from "../Base/Base";
 
 interface Props extends Space, PositionValue, Layout {
