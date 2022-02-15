@@ -1,5 +1,5 @@
-import { select, color, text } from "@storybook/addon-knobs";
-import { SpaceOptions } from "../../share/Layout/utils/spacingTypes";
+import { select } from "@storybook/addon-knobs";
+import { SpaceOptions } from "../../../Layout/utils/spacingTypes";
 import { spacingOptions } from "../utils/baseUtils";
 
 export const useSpace = () => {

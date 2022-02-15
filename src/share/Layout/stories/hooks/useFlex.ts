@@ -5,7 +5,7 @@ import {
   AlignItems,
   JustifyContent,
   FlexDisplay,
-} from "../../share/Layout/utils/spacingTypes";
+} from "../../../Layout/utils/spacingTypes";
 import {
   flexDirectionOptions,
   flexWrapOptions,

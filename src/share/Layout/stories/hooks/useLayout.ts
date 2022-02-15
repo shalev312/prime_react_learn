@@ -5,7 +5,7 @@ import {
   Position,
   PositionValueOptions,
   ZIndex,
-} from "../../share/Layout/utils/spacingTypes";
+} from "../../../Layout/utils/spacingTypes";
 import {
   displayOptions,
   overflowOptions,

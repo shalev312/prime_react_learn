@@ -1,10 +1,10 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import FlexComponent from "../share/Layout/Flex/Flex";
-import { useSpace } from "./hooks/useSpace";
-import { useLayout } from "./hooks/useLayout";
-import { useBaseProps } from "./hooks/useBaseProps";
-import { useFlex } from "./hooks/useFlex";
+import FlexComponent from "./Flex";
+import { useSpace } from "../stories/hooks/useSpace";
+import { useLayout } from "../stories/hooks/useLayout";
+import { useBaseProps } from "../stories/hooks/useBaseProps";
+import { useFlex } from "../stories/hooks/useFlex";
 
 export default {
   title: "Layout/Flex",

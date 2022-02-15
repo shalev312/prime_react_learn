@@ -23,7 +23,7 @@ interface Props extends Space, PositionValue, Layout, Flex {
   /**
    * In line style attribute for custom styling the div parent root element.
    */
-  style?: React.CSSProperties | undefined;
+  style?: React.CSSProperties;
   /**
    * The regular React children prop.
    */
